@@ -1,0 +1,46 @@
+/* Oh My Dare pages: the app's own palette (plum, rose, gold, cream), on top of the shared layout. */
+:root {
+  --plum: #1A0E19; --surface: #2B1829; --rose: #F2739A; --gold: #F3C77B; --cream: #FBEDE6; --muted: #D8B9CD;
+  --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --sans: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --measure: 62ch; --max: 1120px; --gutter: clamp(20px, 5vw, 64px); --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--plum); color: var(--cream); font-family: var(--sans); font-size: 1.0625rem; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 500; margin: 0; letter-spacing: -0.01em; }
+p { margin: 0; } ul { margin: 0; padding: 0; }
+
+.site-header { max-width: var(--max); margin: 0 auto; padding: 26px var(--gutter) 0; display: grid; grid-template-columns: 1fr auto 1fr; align-items: baseline; gap: 20px; }
+.wordmark { font-family: var(--serif); font-size: 1.15rem; }
+.site-nav { display: flex; gap: clamp(14px, 2.5vw, 28px); font-size: 0.92rem; color: var(--muted); }
+.site-nav a { padding-bottom: 3px; border-bottom: 1px solid transparent; transition: color 0.2s, border-color 0.2s; }
+.site-nav a:hover, .site-nav a[aria-current="true"] { color: var(--rose); border-color: var(--rose); }
+.mantra { justify-self: end; color: var(--gold); }
+
+.page { max-width: var(--max); margin: 0 auto; padding: clamp(48px, 8vh, 96px) var(--gutter) clamp(56px, 10vh, 120px); }
+.eyebrow { font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+.page h1 { font-size: clamp(2.4rem, 5.5vw, 4.2rem); line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 20px; }
+.lede { max-width: var(--measure); font-size: 1.1rem; color: var(--muted); margin-bottom: 36px; }
+.mark { width: 64px; height: 64px; display: block; margin-bottom: 20px; }
+
+.prose { max-width: var(--measure); color: var(--muted); }
+.prose a { color: var(--rose); } .prose a:hover { text-decoration: underline; }
+.prose h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.1; color: var(--gold); margin: 44px 0 12px; padding-top: 24px; border-top: 1px solid rgba(251, 237, 230, 0.14); }
+.prose p + p, .prose p + ul, .prose ul + p { margin-top: 12px; }
+.prose strong { color: var(--cream); font-weight: 600; }
+.prose ul { list-style: none; display: grid; gap: 10px; }
+.prose ul li { padding-left: 18px; position: relative; }
+.prose ul li::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 7px; height: 1px; background: var(--rose); }
+.prose .updated { font-family: var(--serif); font-style: italic; color: var(--muted); margin-bottom: 28px; }
+
+.button { display: inline-block; padding: 12px 22px; background: var(--rose); color: #2A0B18; border-radius: 999px; font-weight: 600; font-size: 0.95rem; }
+
+.site-footer { max-width: var(--max); margin: 0 auto; padding: 28px var(--gutter) 40px; border-top: 1px solid rgba(251, 237, 230, 0.14); display: flex; justify-content: space-between; align-items: baseline; gap: 20px; flex-wrap: wrap; color: var(--muted); font-size: 0.9rem; }
+.site-footer a { color: var(--rose); } .site-footer a:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  body { font-size: 1rem; }
+  .site-header { grid-template-columns: 1fr auto; row-gap: 14px; }
+  .site-nav { grid-column: 1 / -1; grid-row: 2; overflow-x: auto; padding-bottom: 4px; }
+}
