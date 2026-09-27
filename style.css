@@ -1,0 +1,25 @@
+:root { --plum:#1A0E19; --surface:#2B1829; --rose:#F2739A; --gold:#F3C77B; --cream:#FBEDE6; --muted:#D8B9CD; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--plum); color:var(--cream); font: 17px/1.6 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+main { max-width: 680px; margin: 0 auto; padding: 48px 20px 64px; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; letter-spacing: 0.2px; }
+h1 { font-size: 2.2rem; margin: 8px 0 4px; }
+h2 { font-size: 1.3rem; margin: 32px 0 8px; color: var(--gold); }
+p, li { color: var(--muted); }
+strong { color: var(--cream); font-weight: 600; }
+a { color: var(--rose); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.mark { width: 72px; height: 72px; display:block; margin-bottom: 8px; }
+.tag { color: var(--muted); margin-top: 0; }
+.card { background: var(--surface); border-radius: 18px; padding: 18px 20px; margin: 20px 0; }
+.btn { display:inline-block; background: var(--rose); color: #2A0B18; font-weight: 600; padding: 14px 22px; border-radius: 16px; margin-top: 8px; }
+.btn:hover { text-decoration: none; opacity: .92; }
+footer { margin-top: 48px; color: var(--muted); font-size: .9rem; }
+footer a { margin-right: 16px; }
+
+/* Landing page tiles */
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin-top: 24px; }
+.tile { display:block; background: var(--surface); border-radius: 18px; padding: 18px 20px; color: var(--cream); }
+.tile:hover { text-decoration: none; outline: 1.5px solid var(--rose); }
+.tile h3 { margin: 0 0 6px; font-size: 1.1rem; }
+.tile p { margin: 0; font-size: .95rem; }
