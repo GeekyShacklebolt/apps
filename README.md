@@ -8,4 +8,3 @@ because the store listing points at it.
 |---|---|
 | `index.html` | The landing page listing projects |
 | `style.css` | Shared styles |
-| `ohmydare/` | Oh My Dare: landing page and privacy policy |
